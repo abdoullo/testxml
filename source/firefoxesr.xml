@@ -87,14 +87,11 @@
      <!-- <remove cmd='"%PROGRAMFILES%\Mozilla Firefox\uninstall\helper.exe" /S' /> -->
  
      <!-- Desinstallation de Mozilla Maintenance Service -->
-     <remove cmd='%COMSPEC% /C IF EXIST "%PROGRAMFILES%\Mozilla Maintenance Service\Uninstall.exe" "%PROGRAMFILES%\Mozilla Maintenance Service\Uninstall.exe" /S' >
-       <exit code="any" />
-     </remove>
+<!--     <remove cmd='%COMSPEC% /C IF EXIST "%PROGRAMFILES%\Mozilla Maintenance Service\Uninstall.exe" "%PROGRAMFILES%\Mozilla Maintenance Service\Uninstall.exe" /S' ><exit code="any" /></remove>
+ -->
  
      <!-- Desinstallation de Mozilla Maintenance Service x86 sur un ordinateur 64bits -->
-     <remove cmd='%COMSPEC% /C IF EXIST "%PROGRAMFILES(X86)%\Mozilla Maintenance Service\Uninstall.exe" "%PROGRAMFILES(X86)%\Mozilla Maintenance Service\Uninstall.exe" /S' architecture="x64">
-       <exit code="any" />
-     </remove>
- 
+ <!--    <remove cmd='%COMSPEC% /C IF EXIST "%PROGRAMFILES(X86)%\Mozilla Maintenance Service\Uninstall.exe" "%PROGRAMFILES(X86)%\Mozilla Maintenance Service\Uninstall.exe" /S' architecture="x64"><exit code="any" /></remove>
+ -->
   </package>
  </packages>
