@@ -4,4 +4,5 @@
 # git commit -m "first commit"
 # git remote add origin git@github.com:abdoullo/testxml.git
 # git push -u origin master
-Git de test
+# Git de test
+# git rm -r
