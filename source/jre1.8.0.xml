@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+
+<packages>  
+ <package
+   id="jre1.8.0"
+   name="Java 8"
+   revision="2017112901"
+   reboot="false"
+   priority="20">
+
+   <variable name="PKG_VERSION" value="151" />
+   <variable name="PKG_VER" value="8.0.1510.12" />
+   <variable name='PKG_FLAGS' value='U=0 JAVAUPDATE=0 AUTOUPDATECHECK=0 RebootYesNo=No WEB_JAVA=1 WEB_JAVA_SECURITY_LEVEL=H NOSTARTMENU=1' />
+ 
+   <check type='logical' condition='or'>
+    <check type="uninstall" condition="versiongreaterorequal" path="Java 8 Update .*" value="%PKG_VER%" />
+    <check type="uninstall" condition="exists" path="Java 8 Update %PKG_VERSION%" />
+    <check type="uninstall" condition="exists" path="Java 8 Update %PKG_VERSION% (64-bit)" architecture="x64" />
+   </check>
+
+
+
+  <install cmd='msiexec.exe /i "%SOFTWARE%\java\jre1.8.0_%PKG_VERSION%64.msi" /qn %PKG_FLAGS%' architecture="x64" >
+   <exit code="any" />
+  </install>
+
+  <install cmd='msiexec.exe /i "%SOFTWARE%\java\jre1.8.0_%PKG_VERSION%.msi" /qn %PKG_FLAGS%' >
+   <exit code="any" />
+  </install>	
+
+  <install cmd='REG DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v SunJavaUpdateSched /f'>
+   <exit code="any" />
+  </install>
+
+  <install cmd='REG DELETE HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run /v SunJavaUpdateSched /f' architecture="x64">
+   <exit code="any" />
+  </install>
+
+  <upgrade include='install' >
+   <condition>
+    <check type="uninstall" condition="versionsmallerthan" path="Java 8 Update .*" value="%PKG_VER%" />
+   </condition>
+  </upgrade>
+
+  <downgrade include='install' >
+   <condition>
+    <check type="uninstall" condition="versionsmallerthan" path="Java 8 Update .*" value="%PKG_VER%" />
+   </condition>
+  </downgrade>
+
+	
+<!-- Pas de Desinstallation de la Java version (N)
+	
+	<remove cmd='msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%PKG_VERSION%F0}' architecture="x64" >
+	 <exit code="any" />
+	</remove>
+	
+	<remove cmd='msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%PKG_VERSION%F0}' >
+	 <exit code="any" />
+	</remove>
+-->	
+    </package>
+</packages>

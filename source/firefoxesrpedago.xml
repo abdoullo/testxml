@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<packages:packages
+        xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+       <package
+      id="firefoxesrpedago"
+      name="Mozilla Firefox ESR PEDAGO"
+      revision="2017100901"
+      reboot="false"
+      priority="100">
+
+      
+      <variable name="PKG_VERSION" value="52.4.1" />
+      <variable name="PKG_BRANCHE" value="esr" />
+	  <variable name="PKG_FIREFOXINI" value="%SOFTWARE%\firefox\conf\firefox.ini" />
+
+ 	<check type="logical" condition="or">
+ 	  <check type="uninstall" condition="versiongreaterorequal" path="Mozilla Firefox .*" value="%PKG_VERSION%" />
+ 	  <check type="uninstall" condition="versiongreaterorequal" path="Mozilla Firefox %PKG_VERSION% ESR (x86 fr)" value="%PKG_VERSION%" architecture="x86"/>
+ 	  <check type="uninstall" condition="versiongreaterorequal" path="Mozilla Firefox %PKG_VERSION% ESR (x64 fr)" value="%PKG_VERSION%" architecture="x64"/>
+ 	</check>
+
+     <install cmd="taskkill /F /IM Firefox.exe">
+        <exit code="0" />
+        <exit code="128" />
+        <exit code="-1073741515" />
+      </install>
+	  
+	  <!-- Suppression raccourci Firefox dans le bureau public -->
+      <install cmd='%COMSPEC% /C IF EXIST "C:\Users\Public\Desktop\Mozilla Firefox.lnk" del "C:\Users\Public\Desktop\Mozilla Firefox.lnk"' >
+           <exit code="any" />
+      </install>
+	  
+	  <!-- Desnstallation de la version x86 sur un ordinateur 64bits -->
+      <install cmd='%COMSPEC% /C IF EXIST "%PROGRAMFILES(X86)%\Mozilla Firefox\uninstall\helper.exe" "%PROGRAMFILES(X86)%\Mozilla Firefox\uninstall\helper.exe" /S' architecture="x64" >
+           <exit code="any" />
+      </install>
+	  
+	  <!-- Desnstallation de Mozilla Maintenance Service -->
+	  <install cmd='%COMSPEC% /C IF EXIST "%PROGRAMFILES%\Mozilla Maintenance Service\Uninstall.exe" "%PROGRAMFILES%\Mozilla Maintenance Service\Uninstall.exe" /S' >
+            <exit code="any" />
+      </install>
+	  
+	  
+	<!-- Desnstallation de Mozilla Maintenance Service x86 sur un ordinateur 64bits -->
+      <install cmd='%COMSPEC% /C IF EXIST "%PROGRAMFILES(X86)%\Mozilla Maintenance Service\Uninstall.exe" "%PROGRAMFILES(X86)%\Mozilla Maintenance Service\Uninstall.exe" /S' architecture="x64">
+            <exit code="any" />
+      </install>
+	  
+
+	  <!--Installation de la version (N) x86 -->
+	  <install cmd='"%SOFTWARE%\firefox\x86\Firefox Setup %PKG_VERSION%%PKG_BRANCHE%.exe" -ms /ini="%PKG_FIREFOXINI%"' architecture="x86" />
+	  
+	  <!--Installation de la version (N) x64 -->
+      <install cmd='"%SOFTWARE%\firefox\x64\Firefox Setup %PKG_VERSION%%PKG_BRANCHE%.exe" -ms /ini="%PKG_FIREFOXINI%"' architecture="x64"/>
+
+
+      <!-- Firefox comme navigateur par defaut -->
+      <install cmd='%COMSPEC% /C IF EXIST "%PROGRAMFILES%\Mozilla Firefox\uninstall\helper.exe" "%PROGRAMFILES%\Mozilla Firefox\uninstall\helper.exe" /SetAsDefaultAppGlobal' >
+            <exit code="any" />
+      </install>
+	  
+	  <!-- Desactivation du service MozillaMaintenance -->
+      <install cmd='%COMSPEC% /C "sc config MozillaMaintenance start= disabled"' >
+            <exit code="any" />
+      </install>
+
+
+      <upgrade include='install' />
+
+      <downgrade include='install' />
+
+      <remove cmd="taskkill /F /IM Firefox.exe">
+        <exit code="0" />
+        <exit code="128" />
+        <exit code="-1073741515" />
+      </remove>
+      
+
+<!-- Pas de Desinstallation de Firefox 	
+ 	<remove cmd='"%PROGRAMFILES%\Mozilla Firefox\uninstall\helper.exe" /S' />
+-->	  
+ 	<!-- Desnstallation de Mozilla Maintenance Service -->
+ 	<remove cmd='%COMSPEC% /C IF EXIST "%PROGRAMFILES%\Mozilla Maintenance Service\Uninstall.exe" "%PROGRAMFILES%\Mozilla Maintenance Service\Uninstall.exe" /S' >
+ 	  <exit code="any" />
+ 	</remove>
+
+    </package>
+</packages:packages>

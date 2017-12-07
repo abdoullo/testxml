@@ -1,0 +1,1985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<packages>
+  <package 
+    id="removejava"
+    revision="2017112901"
+    reboot="false"
+    priority="10"
+	execute="once">
+
+       
+ 	<depends package-id="jre1.8.0" />
+	
+	<!--Variables pour les anciennes versions de java 8 -->
+ 	<variable name="version8144" value="144" />
+ 	<variable name="version8141" value="141" />
+ 	<variable name="version8131" value="131" />
+	<variable name="version8121" value="121" />
+	<variable name="version8111" value="112" />
+	<variable name="version8111" value="111" />
+	<variable name="version8102" value="102" />
+	<variable name="version8101" value="101" />
+	<variable name="version892" value="92" />
+	<variable name="version891" value="91" />
+	<variable name="version877" value="77" />
+	<variable name="version874" value="74" />
+	<variable name="version873" value="73" />
+	<variable name="version872" value="72" />
+	<variable name="version871" value="71" />
+	<variable name="version866" value="66" />
+	<variable name="version865" value="65" />
+	<variable name="version860" value="60" />
+	<variable name="version851" value="51" />
+	<variable name="version845" value="45" />
+	<variable name="version840" value="40" />
+	<variable name="version831" value="31" />
+	<variable name="version825" value="25" />
+	<variable name="version820" value="20" />
+	<variable name="version811" value="11" />
+	<variable name="version805" value="05" />
+	<variable name="version800" value="00" />
+	
+	<!--Variables pour les anciennes versions de java 7 -->
+	<variable name="version780" value="80" />
+	<variable name="version779" value="79" />
+	<variable name="version776" value="76" />
+	<variable name="version775" value="75" />
+	<variable name="version772" value="72" />
+	<variable name="version771" value="71" />
+	<variable name="version767" value="67" />
+	<variable name="version765" value="65" />
+	<variable name="version760" value="60" />
+	<variable name="version755" value="55" />
+	<variable name="version751" value="51" />
+	<variable name="version745" value="45" />
+	<variable name="version740" value="40" />
+	<variable name="version725" value="25" />
+	<variable name="version721" value="21" />
+	<variable name="version717" value="17" />
+	<variable name="version715" value="15" />
+	<variable name="version713" value="13" />
+	<variable name="version711" value="11" />
+	<variable name="version710" value="10" />
+	<variable name="version709" value="09" />
+	<variable name="version707" value="07" />
+	<variable name="version706" value="06" />
+	<variable name="version705" value="05" />
+	<variable name="version704" value="04" />
+	<variable name="version703" value="03" />
+	<variable name="version702" value="02" />
+	<variable name="version701" value="01" />
+	<variable name="version700" value="00" />
+
+	
+  <!-- Arret de Java, Internet Explorer et Firefox -->
+  <install cmd='taskkill /f /im jqs.exe /im iexplore.exe /im firefox.exe /im chrome.exe'>
+    <exit code='0' />
+    <exit code='1' />
+    <exit code='128' />
+  </install>
+
+  <!--8 144 -->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8144%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8144% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8144%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8144%" />
+	  </condition>
+	</install>
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8144%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8144% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8144%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8144%" />
+	  </condition>
+	</install>
+
+  <!--8 141-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8141%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8141% (64-bit)" architecture="x64" />
+	  </condition>	 
+	</install>
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8141%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8141%" />
+	  </condition>	 
+	</install>
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8141%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8141% (64-bit)" architecture="x64" />
+	  </condition>	 
+	</install>
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8141%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8141%" />
+	  </condition>	 
+	</install>
+  
+  <!--8 131-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8131%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8131% (64-bit)" architecture="x64" />
+	  </condition>	 
+	</install>
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8131%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8131%" />
+	  </condition>	 
+	</install>
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8131%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8131% (64-bit)" architecture="x64" />
+	  </condition>	 
+	</install>
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8131%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8131%" />
+	  </condition>	 
+	</install>
+	
+	
+  <!--8 121-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8121%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8121% (64-bit)" architecture="x64" />
+	  </condition>	 
+	</install>
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8121%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	 <condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8121%" />
+	  </condition>	 
+	</install>
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8121%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8121%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8121%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8121%" />
+	  </condition>
+	</install>  
+  
+  <!--8 112-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8112%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8112%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8112%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8112%" />
+	  </condition>
+	</install>  
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8112%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8112%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8112%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8112%" />
+	  </condition>
+	</install>  
+  
+  <!--8 111-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8111%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8111%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8111%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8111%" />
+	  </condition>
+	</install>  
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8111%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8111%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8111%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8111%" />
+	  </condition>
+	</install>  
+    
+  <!--8 102 -->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8102%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8102%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8102%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8102%" />
+	  </condition>
+	</install>  
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8102%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8102%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8102%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8102%" />
+	  </condition>
+	</install>  
+  
+  <!--8 101-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8101%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8101%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8101%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8101%" />
+	  </condition>
+	</install>  
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F64180%version8101%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8101%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F32180%version8101%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version8101%" />
+	  </condition>
+	</install>  
+  
+  <!--8 92-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version892%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version892%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version892%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version892%" />
+	  </condition>
+	</install>  
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version892%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version892%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version892%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version892%" />
+	  </condition>
+	</install>  
+    
+    <!--8 91-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version891%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version891%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version891%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version891%" />
+	  </condition>
+	</install>  
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version891%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version891%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version891%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version891%" />
+	  </condition>
+	</install>  
+    
+    <!--8 77-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version877%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version877%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version877%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version877%" />
+	  </condition>
+	</install>  
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version877%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version877%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version877%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version877%" />
+	  </condition>
+	</install>  
+    
+    <!--8 74-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version874%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version874%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version874%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version874%" />
+	  </condition>
+	</install>  
+    
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version874%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version874%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version874%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version874%" />
+	  </condition>
+	</install>  
+	
+    <!--8 73-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version873%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version873%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version873%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version873%" />
+	  </condition>
+	</install>  
+    
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version873%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version873%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version873%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version873%" />
+	  </condition>
+	</install>  
+	
+    <!--8 72-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version872%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version872%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version872%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version872%" />
+	  </condition>
+	</install>  
+    
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version872%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version872%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version872%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version872%" />
+	  </condition>
+	</install>  
+	
+    <!--8 71-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version871%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version871%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version871%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version871%" />
+	  </condition>
+	</install>  
+    
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version871%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version871%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version871%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version871%" />
+	  </condition>
+	</install>  
+	
+  <!--8 66-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version866%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version866%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version866%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version866%" />
+	  </condition>
+	</install>  
+    
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version866%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version866%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version866%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version866%" architecture="x64" />
+	  </condition>
+	</install>  
+	
+  <!--8 65-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version865%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version865%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version865%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version865%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version865%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version865%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version865%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version865%" architecture="x64"  />
+	  </condition>
+	</install>  
+	
+	<!--8 60 -->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version860%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version860% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version860%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version860%" />
+	  </condition>
+	</install>  
+
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version860%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version860%" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version860%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version860%" />
+	  </condition>
+	</install>  
+	
+    <!--8 51-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version851%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version851% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version851%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version851%" />
+	  </condition>
+	</install>  
+    
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version851%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version851% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version851%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version851%" />
+	  </condition>
+	</install>  
+	
+   <!--8 45-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version845%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version845% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version845%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version845%" />
+	  </condition>
+	</install>   
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version845%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version845% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version845%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version845%" />
+	  </condition>
+	</install>  
+	
+   <!--8 40-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version840%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version840% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version840%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version840%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version840%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version840% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version840%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version840%" />
+	  </condition>
+	</install>  
+	
+    <!--8 31-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version831%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version831% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version831%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version831%" />
+	  </condition>
+	</install>   
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version831%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version831% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version831%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version831%" />
+	  </condition>
+	</install>  
+	
+   <!--8 25-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version825%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version825% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version825%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version825%" />
+	  </condition>
+	</install>   
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version825%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version825% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version825%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version825%" />
+	  </condition>
+	</install>  
+	
+   <!--8 20-->
+
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version820%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version820% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version820%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version820%" />
+	  </condition>
+	</install>   
+    
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version820%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version820% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version820%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version820%" />
+	  </condition>
+	</install>  
+	
+    <!--8 11-->
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version811%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version811% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version811%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version811%" />
+	  </condition>
+	</install>  
+	
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version811%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version811% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version811%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version811%" />
+	  </condition>
+	</install>     
+
+   <!--8 05-->
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version805%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version805% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version805%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version805%" />
+	  </condition>
+	</install>  
+	
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version805%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version805% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version805%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 Update %version805%" />
+	  </condition>
+	</install>  
+
+   <!--8 00-->
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version800%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 (64-bit)" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version800%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8" />
+	  </condition>
+	</install>  
+	
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864180%version800%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8 (64-bit)" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%version800%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 8" />
+	  </condition>
+	</install>   
+     
+	<!--7 80-->
+    
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version780%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version780% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version780%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version780%" />
+	  </condition>
+	</install>  
+	
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version780%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version780% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version780%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version780%" />
+	  </condition>
+	</install>  
+	
+	<!--7 79-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version779%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version779% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version779%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version779%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version779%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version779% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version779%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version779%" />
+	  </condition>
+	</install>  
+	
+	<!--7 76-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version776%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version776% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version776%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version776%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version776%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version776% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version776%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version776%" />
+	  </condition>
+	</install>  
+	
+	<!--7 75-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version775%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version775% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version775%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version775%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version775%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version775% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version775%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version775%" />
+	  </condition>
+	</install>  
+	
+	<!--7 72-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version772%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version772% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version772%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version772%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version772%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version772% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version772%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version772%" />
+	  </condition>
+	</install>  
+	
+	<!--7 71-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version771%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version771% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version771%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version771%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version771%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version771% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version771%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version771%" />
+	  </condition>
+	</install>  
+	
+	<!--7 67-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version767%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version767% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version767%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version767%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version767%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version767% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version767%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version767%" />
+	  </condition>
+	</install>  
+	
+	<!--7 65-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version765%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version765% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version765%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version765%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version765%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version765% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version765%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version765%" />
+	  </condition>
+	</install>  
+	
+	<!--7 60-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version760%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version760% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version760%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version760%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F064170%version760%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version760% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F032170%version760%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version760%" />
+	  </condition>
+	</install>  
+	
+	<!--7 55-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version755%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version755% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version755%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version755%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version755%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version755% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version755%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version755%" />
+	  </condition>
+	</install>  
+	
+	<!--7 51-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version751%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version751% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version751%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version751%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version751%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version751% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version751%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version751%" />
+	  </condition>
+	</install>  
+	
+	<!--7 45-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version745%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version745% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version745%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version745%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version745%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version745% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version745%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version745%" />
+	  </condition>
+	</install>  
+	
+	<!--7 40-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version740%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version740% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version740%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version740%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version740%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version740% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version740%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version740%" />
+	  </condition>
+	</install>  
+	
+	<!--7 25-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version725%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version725% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version725%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version725%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version725%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version725% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version725%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version725%" />
+	  </condition>
+	</install>  
+	
+	<!--7 21-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version721%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version721% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version721%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version721%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version721%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version721% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version721%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version721%" />
+	  </condition>
+	</install>  
+	
+	<!--7 17-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version717%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version717% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version717%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version717%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version717%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version717% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version717%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version717%" />
+	  </condition>
+	</install>  
+	
+	<!--7 15-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version715%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version715% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version715%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version715%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version715%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version715% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version715%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version715%" />
+	  </condition>
+	</install>  
+	
+	<!--7 13-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version713%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version713% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version713%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version713%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version713%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version713% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version713%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version713%" />
+	  </condition>
+	</install>  
+	
+	<!--7 11-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version711%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version711% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version711%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version711%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version711%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version711% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version711%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version711%" />
+	  </condition>
+	</install>  
+	
+	<!--7 10-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version710%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version710% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version710%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version710%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version710%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version710% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version710%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version710%" />
+	  </condition>
+	</install>  
+	
+	<!--7 09-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version709%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version709% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version709%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version709%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version709%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version709% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version709%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version709%" />
+	  </condition>
+	</install>  
+	
+	<!--7 07-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version707%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version707% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version707%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version707%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version707%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version707% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version707%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version707%" />
+	  </condition>
+	</install>  
+	
+	<!--7 06-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version706%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version706% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version706%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version706%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version706%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version706% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version706%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version706%" />
+	  </condition>
+	</install>  
+	
+	<!--7 05-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version705%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version705% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version705%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version705%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version705%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version705% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version705%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version705%" />
+	  </condition>
+	</install>  
+	
+	<!--7 04-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version704%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version704% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version704%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version704%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version704%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version704% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version704%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version704%" />
+	  </condition>
+	</install>  
+	
+	<!--7 03-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version703%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version703% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version703%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version703%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version703%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version703% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version703%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version703%" />
+	  </condition>
+	</install>  
+	
+	<!--7 02-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version702%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version702% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version702%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version702%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version702%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version701% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version702%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version702%" />
+	  </condition>
+	</install>  
+	
+	<!--7 01-->
+   
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version701%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version701% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version701%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version701%" />
+	  </condition>
+	</install>  
+	
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version701%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version701% (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version701%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 Update %version701%" />
+	  </condition>
+	</install>  
+	
+	<!--7 00-->
+    
+	<install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version700%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version700%F0}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7" />
+	  </condition>
+	</install>  
+	
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F864170%version700%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7 (64-bit)" architecture="x64" />
+	  </condition>
+	</install>  
+      
+    <install cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%version700%FF}">
+	 <exit code='0' />
+	 <exit code='any' />
+	<condition>
+	   <check type="uninstall" condition="exists" path="Java 7" />
+	  </condition>
+	</install>  
+    
+  <upgrade include="install" />       
+      
+    </package>
+</packages>
