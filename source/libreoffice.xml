@@ -1,0 +1,70 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
+ <packages>
+  <package
+    id="libreoffice"
+    name="LibreOffice"
+    revision="2017121101"
+    reboot="false"
+    priority="15">
+ 
+ 	<variable name="PKG_VERSION" value="5.4.4.1" />
+ 	<variable name="PKG_Uninstall" value="%PROGRAMFILES%\LibreOffice" />
+ 	<variable name="PKG_Uninstall32_x64" value="%PROGRAMFILES(x86)%\LibreOffice" />
+ 
+ 	<!-- Recherche version superieur ou egale PKG_VERSION -->
+    <check type="uninstall" condition="versiongreaterorequal" path="LibreOffice .*" value="%PKG_VERSION%" />	
+ 
+ 	<!-- Suppresion des anciennes versions LibreOffice -->
+    <install cmd='wmic product where "name like &apos;LibreOffice%%&apos;" call uninstall /nointeractive' />
+ 
+ 	<!-- Suppresion du dossier LibreOffice 5 -->
+ 	<install cmd='%COMSPEC% /C IF EXIST "%PKG_Uninstall% 5" rmdir /S /Q "%PKG_Uninstall% 5" '>
+ 	  <exit code="any" />
+ 	</install>  
+ 
+ 	<install cmd='%COMSPEC% /C IF EXIST "%PKG_Uninstall32_x64% 5" rmdir /S /Q "%PKG_Uninstall32_x64% 5" '>
+ 	  <exit code="any" />
+ 	</install>	
+ 
+ 	<!-- Suppresion du dossier LibreOffice 4 -->
+ 	<install cmd='%COMSPEC% /C IF EXIST "%PKG_Uninstall% 4" rmdir /S /Q "%PKG_Uninstall% 4" '>
+ 	  <exit code="any" />
+ 	</install>
+ 	
+ 	<install cmd='%COMSPEC% /C IF EXIST "%PKG_Uninstall32_x64% 4" rmdir /S /Q "%PKG_Uninstall32_x64% 4" '>
+ 	  <exit code="any" />
+ 	</install>	
+ 
+ 	<!-- Suppresion du dossier LibreOffice 3 -->
+ 	<install cmd='%COMSPEC% /C IF EXIST "%PKG_Uninstall% 3" rmdir /S /Q "%PKG_Uninstall% 3" '>
+ 	  <exit code="any" />
+ 	</install>	
+ 
+ 	<install cmd='%COMSPEC% /C IF EXIST "%PKG_Uninstall32_x64% 3" rmdir /S /Q "%PKG_Uninstall32_x64% 3" '>
+ 	  <exit code="any" />
+ 	</install>	
+ 
+ 	<!-- Installation de LibreOffice -->
+    <install cmd='msiexec.exe /qn /i %SOFTWARE%\libreoffice\x86\LibreOffice_%PKG_VERSION%_Win_x86.msi' architecture="x86" />
+    <install cmd='msiexec.exe /qn /i %SOFTWARE%\libreoffice\x64\LibreOffice_%PKG_VERSION%_Win_x64.msi' architecture="x64" />
+ 	
+ 	<!-- Installation de LibreOffice helppack_fr-->
+    <install cmd='msiexec.exe /qn /i %SOFTWARE%\libreoffice\x86\LibreOffice_%PKG_VERSION%_Win_x86_helppack_fr.msi' architecture="x86" />
+    <install cmd='msiexec.exe /qn /i %SOFTWARE%\libreoffice\x64\LibreOffice_%PKG_VERSION%_Win_x64_helppack_fr.msi' architecture="x64" />
+ 
+    <!-- Upgrade -->
+    <upgrade include="install" >
+ 	 <condition>
+ 	   <check type="uninstall" condition="versionsmallerthan" path="LibreOffice .*" value="%PKG_VERSION%" />
+ 	 </condition>
+    </upgrade>
+ 
+ 	<!-- Downgrade -->
+    <downgrade include="install" >
+ 	 <condition>
+ 	  <check type="uninstall" condition="versiongreaterthan" path="LibreOffice .*" value="%PKG_VERSION%" />
+ 	 </condition>
+    </downgrade>
+  </package>
+ </packages>
